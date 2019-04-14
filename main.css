@@ -1,74 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none; 
+    font-family: 'Play', sans-serif;
+}
+
 body{
-    background-image: url("concrete_seamless.png");
-    
+    background: url("./Images/webdevbackground.png") no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+    list-style: none;
+    text-decoration: none; 
 }
 
-.col{
-    background-color:white;
-}
-
-.mycol{
-    margin-left:15px;
-    margin-right:25px;
-}
-
-.rowCus{
- border-bottom: 20px;
-}
-
-.myform{
-    padding:10px;
-}
-.card{
-    border: solid grey;
-    margin-top:30px;
-    margin-bottom:30px;
-    width:auto;
-}
-
-.controlnav{
-    background-color:white; 
-    height:100%;
-    text-align: center;
-    width: 80%;
-}
-.header{
-    background-color: white;
-    padding-top:0px;
-    padding-bottom:0px;
-    margin-top: 10px;
-    width:100%;
-    height: 15%;
-    border-bottom: 2px solid #ccc;
-
-}
-.namenav
-{
-    background:#4aaaa5;
-    height:100%;
-    text-align: center;
-    width:auto;
-}
+.mynav{
+    background: rgba(83, 106, 180);
+  }
 
 .portHead
 {
-  color:#4aaaa5;
-  font-family: "Times New Roman", Times, serif;
+  color:#dceeed;
   font-weight: bold;
   padding-bottom:15px;
 }
 
-.mybtn{
-    background-color:#4aaaa5;
-}
-.myform{
-    width:100%;
-}
-.mytext{
+.aboutMe{
     padding-top:30px;
+    color:white;
+    
 }
 .myimg{
     padding-top:30px;
+    max-width:300px;
+    max-height: 300px;
+
 }
 .h1{
     margin-left:auto;
@@ -76,68 +41,359 @@ body{
     font-weight: bold;
     width:auto;
 }
-.rowHead{
-    border-bottom: 3px solid lightgray;
-    border-bottom-width: 100%;
-}
 
-.imgHead
-{
-font-family: "Times New Roman", Times, serif;
-position:absolute;
-bottom: 10px;  
-background:#4aaaa5;
-width:100%;
-text-align: center;
-padding: 15px;
-color: white;
-font-size: x-large;  
-}
-.navlist{
-  color: #999;
-  text-decoration: none;
-  padding-top:15px;
-  border-right: 1px solid #efefef;
-  margin-top: 20px;
-}
-
-.portImg{
-    width: 250px;
-    height: 250px;
-
-}
 .myjumbo{
     margin-top:20px;
-    background-color:white;
+    background-color: rgba(0,0,0,0.7);
+    padding: 0;
+    padding-top:10px;
 
 }
-.profpic{
-    image-resolution:200px;
+
+.headContainer{
+    padding-top:20px;
 }
 
-.footer{
-    padding: 30px 0;
-    font-size: 12px;
+.myRow{
+    padding-top: 20px;
+}
+
+.headerRow{
+    color:white;
+    font-weight: bold;
+    background-color:rgba(0,0,0,0.5);
+
+}
+
+/* Main Index */
+
+.landing-page{
+    width: 100%;
+    height:100vh;
+    background:#000;
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-page::after{
+    content:"";
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:url(Images/webdevbackground.png) no-repeat;
+    background-size:cover;
+    opacity: .3;
+    animation: anim 25s linear infinite;
+}
+
+@keyframes anim{
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.page-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    max-width: 800px;
     text-align: center;
-    background: #666;
-    border-top: 8px solid #4aaaa5;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.page-content h1{
+    color:#c7ecee;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 20px;
+
+}
+
+.page-content p{
+    color:#fff;
+    margin-bottom: 20px;
+}
+
+.page-content a{
+    display: inline-block;
+    text-decoration: none;
+    color: #c7ecee;
+    border: 2px solid #c7ecee;
+    text-transform:uppercase;
+    padding: 10px 20px;
+    transition: 0.4s linear;
+}
+
+.landing-page img {
+    max-height:400px;
+    max-width:400px;
+}
+.page-content a:hover{
+    color: black;
+    background:#c7ecee;
+}
+
+/* Skill List CSS */
+
+
+.mycontainer{
+    background-color:rgba(0,0,0,0.7);
+}
+.skills{
+    width:500px;
+    margin:20px auto;
+    color:white;
+    
+}
+
+.skills li{
+
+  margin: 20px 0;
+}
+
+.bar{
+    background:#353b48;
+    display:block;
+    height:4px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #2187e7b3;
+
+}
+
+.bar span{
+    height: 4px;
+    float: left;
+    background: #2187e7;
+
+}
+
+.html{
+    width:90%;
+    animation: html 5s;
+}
+
+.css{
+    width:75%;
+    animation: css 5s;
+}
+
+.jquery{
+    width:85%;
+    animation: jquery 5s;
+}
+
+.javascript{
+    width:85%;
+    animation: javascript 5s;
+}
+
+.node{
+    width:70%;
+    animation: node 5s;
+}
+
+.mysql{
+    width:60%;
+    animation: mysql 5s;
+}
+
+.mongo{
+    width:50%;
+    animation: mongo 5s;
+}
+
+.react{
+    width:40%;
+    animation: react 5s;
+}
+@keyframes html{
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes css{
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes jquery{
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+@keyframes javascript{
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+@keyframes node{
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes mysql{
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes mongo{
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+@keyframes react{
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 40%;
+    }
+}
+
+/* Social Media */
+
+.user-media {
+    padding-top:10px;
+
+}
+.user-media a{
     height: 50px;
+    width: 50px;
+    overflow: hidden;
+    margin: 0 3px;
+    padding: 10px;
+    display:inline-block;
+    border-radius: 50%;
 }
-@media screen and (max-width:640px)
-{
-.header{
-    position:relative;
-    margin-bottom:50px;
+
+.user-media a i{
+    color: #fff;
+    margin:0;
 }
-.controlnav{
+
+.color1{
+    background:darkcyan;
+}
+
+.color2{
+    background:darkslategray;
+}
+.color3{
+    background: mediumpurple;
+}
+.icon{
+    font-size:30px;
+}
+
+/* Card-Flip Css */
+
+.cardCol{
+    height:50%;
+    padding:15px;
+    margin:0;
+}
+.card-show{
+    cursor: pointer;
+    width:auto;
+    height:100%;
+    border:none;
+    margin:0;
+    padding:0;
+}
+
+.front, .back{
+    width:100%;
+    height:100%;
+    overflow:hidden;    
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+}
+
+.front img{
+   max-height: 100%;
+   width: 100%;
+   margin:0;
+   padding:0;
+}
+
+.front{
+
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back{
+    background: url("./Images/macBlank.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform: perspective(600px) rotateY(180deg);
+}
+.back-content, h3{
+    margin-top:50px;
+}
+
+.back-content, i{
+    margin-left:10px;
+}
+
+.backBtn{
+  margin: 10px;
+}
+
+.back-content{
+    text-align: center;
     width:100%;
 }
-.navlist{
-    padding-right:20px;
-    margin-right:auto;
-    margin-left:auto;
+
+.card-show:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
 }
-.myjumbo{
-    margin:15px;
-}
+
+.card-show:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
 }
