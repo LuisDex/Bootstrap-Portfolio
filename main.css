@@ -148,9 +148,11 @@ body{
 
 .mycontainer{
     background-color:rgba(0,0,0,0.7);
+    padding-right:20px;
 }
 .skills{
-    width:500px;
+    
+    width:100%;
     margin:20px auto;
     color:white;
     
@@ -210,12 +212,12 @@ body{
 }
 
 .mongo{
-    width:50%;
+    width:70%;
     animation: mongo 5s;
 }
 
 .react{
-    width:40%;
+    width:60%;
     animation: react 5s;
 }
 @keyframes html{
@@ -282,7 +284,7 @@ body{
     }
 
     100% {
-        width: 50%;
+        width: 70%;
     }
 }
 @keyframes react{
@@ -291,7 +293,7 @@ body{
     }
 
     100% {
-        width: 40%;
+        width: 60%;
     }
 }
 
@@ -333,9 +335,21 @@ body{
 /* Card-Flip Css */
 
 .cardCol{
-    height:50%;
     padding:15px;
-    margin:0;
+}
+
+.card-body{
+    background: darkcyan;
+}
+
+.card-title{
+    font-weight: bold;
+}
+.card{
+    margin: 10px;
+    box-shadow: inset 5px 3px 4px rgba(0,0,0,0.4);
+    max-height:75%;
+
 }
 .card-show{
     cursor: pointer;
@@ -356,21 +370,23 @@ body{
 }
 
 .front img{
-   max-height: 100%;
-   width: 100%;
+   /* height: auto; */
+   max-width: 100%;
+   max-height:100%;
    margin:0;
    padding:0;
 }
 
 .front{
-
+   
     transform: perspective(600px) rotateY(0deg);
 }
 
 .back{
-    background: url("./Images/macBlank.png");
+    /* background: url("./Images/macBlank.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100%; */
+    background-color:blue;
     transform: perspective(600px) rotateY(180deg);
 }
 .back-content, h3{
@@ -397,3 +413,4 @@ body{
 .card-show:hover > .back{
     transform: perspective(600px) rotateY(0deg);
 }
+
